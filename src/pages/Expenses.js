@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import data from "./Data";
 
 const Index = () => {
   const [list, setList] = useState([]);
@@ -44,7 +43,8 @@ const Index = () => {
 
   return (
     <div>
-      <h1>balance : {balance}</h1>
+      <div className="formbox">
+      <h1 id="balance">balance : {balance}</h1>
       <form>
         <select id="typebox" >
           <option value="+">+</option>
@@ -63,6 +63,8 @@ const Index = () => {
         </button>
 
       </form>
+      </div>
+
       <hr />
       {list.length === 0 && <h4>There are no transactions</h4>}
       <ul>
